@@ -69,7 +69,7 @@ class PostController extends Controller
 
         $deletePostAction->execute($post);
 
-        return redirect()->back()->with('success', 'Post deleted successfully');
+        return redirect()->route('admin.post.index')->with('success', 'Post deleted successfully.');
     }
 
     public function deleteComment(
